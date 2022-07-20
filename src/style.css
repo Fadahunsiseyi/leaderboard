@@ -1,3 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: blue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+
+li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.leader-board-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+  width: 60%;
+  padding: 10px;
+}
+
+.scores-name-container ul {
+  border: 2px solid #000;
+  margin: 15px 0;
+}
+
+.scores-name-container ul li:nth-child(even) {
+  background-color: gray;
+}
+
+.add-score-container {
+  width: 60%;
+}
+
+.add-score-container h3 {
+  margin: 10px 0;
+}
+
+.add-score-container form {
+  margin: 15px 0;
+}
+
+.add-score-container .submit-btn {
+  float: right;
+  margin-right: 15px;
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px 15px;
+  border: 2px solid #000;
+}
+
+.btn {
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 1);
+  padding: 3px 10px;
+}
+
+.recent-scores {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
 }
