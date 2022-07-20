@@ -1,5 +1,3 @@
-import { add } from 'lodash';
-
 const ul = document.querySelector('.names-container');
 const name = document.querySelector('.input-name');
 const score = document.querySelector('.input-score');
