@@ -1,9 +1,15 @@
 import './style.css';
-import addScore from './scores';
+import {addScore, createScoreName } from './scores';
+import { getUser } from './crud';
+// import { api } from './crud';
+
+// api()
+
+getUser()
 
 const name = document.querySelector('.input-name');
 const submitBtn = document.querySelector('.submit-btn');
-
+const refreshBtn = document.querySelector('.refresh-btn')
 addScore();
 
 submitBtn.addEventListener('click', (e) => {
@@ -15,4 +21,6 @@ submitBtn.addEventListener('click', (e) => {
   }
   console.log('i have been clicked');
 });
+
+refreshBtn.addEventListener('click', getUser)
 
