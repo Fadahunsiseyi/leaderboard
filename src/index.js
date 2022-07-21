@@ -1,6 +1,6 @@
 import './style.css';
-import { addScore} from './scores';
-import { getUser } from './crud';
+import addScore from './scores.js';
+import { getUser } from './crud.js';
 
 getUser();
 
@@ -11,9 +11,11 @@ addScore();
 
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
+  // eslint-disable-next-line no-restricted-globals
   if (isNaN(name.value)) {
     addScore();
   } else {
+    // eslint-disable-next-line no-alert
     alert('The name field should contain letters');
   }
 });
