@@ -1,15 +1,12 @@
 import './style.css';
-import {addScore, createScoreName } from './scores';
+import { addScore} from './scores';
 import { getUser } from './crud';
-// import { api } from './crud';
 
-// api()
-
-getUser()
+getUser();
 
 const name = document.querySelector('.input-name');
 const submitBtn = document.querySelector('.submit-btn');
-const refreshBtn = document.querySelector('.refresh-btn')
+const refreshBtn = document.querySelector('.refresh-btn');
 addScore();
 
 submitBtn.addEventListener('click', (e) => {
@@ -19,8 +16,6 @@ submitBtn.addEventListener('click', (e) => {
   } else {
     alert('The name field should contain letters');
   }
-  console.log('i have been clicked');
 });
 
-refreshBtn.addEventListener('click', getUser)
-
+refreshBtn.addEventListener('click', getUser);
