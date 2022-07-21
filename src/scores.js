@@ -1,12 +1,16 @@
-const ul = document.querySelector('.names-container');
+import { postUser } from './crud.js';
+
+const inputName = document.querySelector('.input-name');
+const inputScore = document.querySelector('.input-score');
+
 const name = document.querySelector('.input-name');
 const score = document.querySelector('.input-score');
 
 const addScore = () => {
   if (name.value === '' && score.value === '') return;
-  const li = `<li>${name.value}:${score.value}</li>`;
-  ul.insertAdjacentHTML('beforeend', li);
-  name.value = '';
-  score.value = '';
+  postUser();
+  inputName.value = '';
+  inputScore.value = '';
 };
+
 export default addScore;
